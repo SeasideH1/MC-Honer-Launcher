@@ -1,12 +1,12 @@
 > 本项目不是 Minecraft 官方产品，未经 Mojang 或 Microsoft 批准，也不与其存在关联。
 
-![MC Honer Launcher 启动选择界面](assets/launcher-welcome-en.png)
+![MC Honer Launcher 启动选择界面](assets/launcher-welcome-en.png?v=450368d)
 
 # MC Honer Launcher（MCHL）
 
 [English](README.en.md) · 中文
 
-![MC Honer Launcher — AiMatrix 启动主界面](assets/launcher-home-en.png)
+![MC Honer Launcher — AiMatrix 启动主界面](assets/launcher-home-en.png?v=450368d)
 
 MC Honer Launcher 是正在开发的 Minecraft: Java Edition 启动器，面向 Windows、MacOS、Linux，用于管理游戏账号、独立实例和整合包更新。
 客户端支持简体中文和 English，可在“设置 → 界面与动效 → 界面语言”中切换。
@@ -17,7 +17,7 @@ MC Honer Launcher 是正在开发的 Minecraft: Java Edition 启动器，面向 
 
 ## 登录、分发与服务器访问（开发早期暂定，后续开发过程可能略有变动）
 
-![MC Honer Launcher 账号登录页面](assets/account-signin-en.png)
+![MC Honer Launcher 账号登录页面](assets/account-signin-en.png?v=450368d)
 
 账号登录用于验证玩家的 Minecraft 正版身份和游戏访问资格。用户通过 Microsoft 官方页面授权，客户端取得 Minecraft 玩家资料，主服务核验身份后建立平台账号，无需另设平台密码。
 目前认证流程已有实现，但应用尚未获准访问 Minecraft Services，完整的真实登录与进服流程仍待验证。
@@ -30,7 +30,7 @@ MCHL 不二次分发 Minecraft 游戏。整合包分发仅包含自定义内容�
 
 ## 功能与界面
 
-![MC Honer Launcher 游戏设置页面](assets/game-settings-en.png)
+![MC Honer Launcher 游戏设置页面](assets/game-settings-en.png?v=450368d)
 
 每个游戏实例保存各自的版本、账号选择和启动设置。客户端支持创建、导入实例，管理 Java 运行时，下载游戏文件并启动游戏。
 整合包更新会与启动器平台服务器定义的远程更新服务器连接，实现便捷的客户端自动更新功能。

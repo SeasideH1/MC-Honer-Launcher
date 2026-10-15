@@ -1,12 +1,12 @@
 > NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
 
-![MC Honer Launcher start selection screen](assets/launcher-welcome-en.png)
+![MC Honer Launcher start selection screen](assets/launcher-welcome-en.png?v=450368d)
 
 # MC Honer Launcher (MCHL)
 
 English · [中文](README.md)
 
-![MC Honer Launcher — AiMatrix home screen](assets/launcher-home-en.png)
+![MC Honer Launcher — AiMatrix home screen](assets/launcher-home-en.png?v=450368d)
 
 MC Honer Launcher is a Minecraft: Java Edition launcher under development, targeting Windows, macOS and Linux. It manages game accounts, separate game instances and modpack updates.
 The client supports Simplified Chinese and English. Switch under Settings → Appearance → Interface language.
@@ -17,7 +17,7 @@ The launcher is still in early development and testing. This repository contains
 
 ## Sign-in, distribution and server access (provisional during early development and subject to minor changes)
 
-![MC Honer Launcher account sign-in page](assets/account-signin-en.png)
+![MC Honer Launcher account sign-in page](assets/account-signin-en.png?v=450368d)
 
 Account sign-in verifies a player's legitimate Minecraft identity and entitlement to the game. Players authorize access through Microsoft's official sign-in page. The client retrieves the Minecraft player profile, and the main service verifies the identity before creating a platform account without a separate password.
 The authentication flow is implemented, but the application has not been approved for Minecraft Services access. The complete live sign-in and server admission flow remains unverified.
@@ -30,7 +30,7 @@ The client allows local offline identities, but they can only be used when a tru
 
 ## Features and interface
 
-![MC Honer Launcher game settings page](assets/game-settings-en.png)
+![MC Honer Launcher game settings page](assets/game-settings-en.png?v=450368d)
 
 Each game instance keeps its own version, account selection and launch settings. The client supports creating and importing instances, managing Java runtimes, downloading game files and launching the game.
 Modpack updates connect to the remote update server defined by the launcher platform server to update the game client automatically.
