@@ -21,11 +21,15 @@ Internal development records dated October 13, 2026 for `0.1.0-alpha.1` include 
 
 Those records also include an OPL connection test between two nodes on one machine, without cross-network coverage. That candidate had no Windows code signature. These historical results do not establish that later versions have passed live Microsoft authorization, authenticated server admission, complete player-session statistics or public-network capacity acceptance.
 
-## Before a player-facing release
+## Current client
 
-The project is named MC Honer Launcher, abbreviated MCHL. Chinese and English clients are in preparation; bilingual interface support is not yet complete. Historical screenshots and the existing data directory retain the previous name.
+In `0.1.0-alpha.15`, the window, tray, shortcuts and installer use MC Honer Launcher (MCHL). Language is selected in Settings. New profiles follow the system language; existing preferences are preserved. The application ID, executable filename and `%APPDATA%\MC-Honer` data directory retain compatibility. Account names, paths and remote publisher content are not automatically translated.
 
-Offline identities are for development and testing only. The current code still exposes a UI and an API for creating them, so access cannot yet be described as closed to ordinary players. Before release, these entry points and their permissions must be isolated and tested to confirm that ordinary players cannot use development identities. Server test access must also require a legitimate game entitlement and must not involve commercial payment conditions.
+The regular client allows local offline identities. Offline launch requires a trusted remote's signed policy declaring a public modpack, allowing `offline` accounts and explicitly offering `offline-singleplayer` or `offline-opl`. Single-player rejects server addresses. OPL requires a running engine and allows only enabled local tunnels. Older policies allowing offline accounts without these modes do not automatically grant access. Private modpacks still require a verified game identity and valid access grants. Test access must not involve commercial payment conditions.
+
+These checks cover launcher-issued launch and connection parameters. They do not prevent manual in-game actions or replace server-side online authentication. Microsoft sessions cannot fall back to tokenless offline sessions.
+
+On October 15, 2026, 45 targeted tests passed on Windows with Node.js `24.19.0` and Electron `44.7.0`, covering language persistence, authentication, signed offline policies, remote policy migration and update verification. Both source and packaged clients passed actual-window checks for Settings language switching, persistence after reload and offline identity entry points. This round did not launch Minecraft or validate live Microsoft authorization, cross-network OPL or an upgrade over an existing installation.
 
 The Microsoft application has not been approved for Minecraft Services access. Live authorization and server admission still require verification after access is granted. Before distributing a modpack, each third-party item's redistribution rights must also be checked, along with the exclusion of vanilla Minecraft code and resource assets.
 

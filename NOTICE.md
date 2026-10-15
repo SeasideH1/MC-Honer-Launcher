@@ -14,7 +14,9 @@ Minecraft、Java、PostgreSQL、Fabric、第三方模组与游戏资源由各自
 
 MCHL 不二次分发 Minecraft 游戏、原版代码或原版资源资产。整合包分发仅限自定义内容；第三方模组、材质包和光影包须按各自许可分发，并保留必要署名与声明。此规则不表示所有候选整合包已完成逐项许可审查。
 
-`assets/honer-announcement.png` 是项目现有的 AI 生成公告背景，作为介绍素材展示；`assets/launcher-preview.png` 是开发工程的 Windows 桌面烟测截图，显示本机游客页面。两张图片均沿用现有工程资源，不代表游戏官方素材、正式发行界面或已通过在线认证。
+README 中的 `assets/aimatrix-download.png` 与 `assets/aimatrix-download-en.png` 是 `0.1.0-alpha.15` 打包客户端的实际中英文截图，显示 AiMatrix 游戏资源准备入口；`assets/installer-zh.png` 是该版本 Windows 安装向导的实际完成页面。这些截图不证明游戏已下载、启动或通过在线认证。
+
+仓库保留的 `assets/honer-announcement.png` 是项目现有的 AI 生成公告背景；`assets/launcher-preview.png` 是此前开发工程的 Windows 桌面烟测截图，显示本机游客页面。两张历史图片均沿用现有工程资源，不代表游戏官方素材或正式发行界面。
 
 ## English
 
@@ -30,4 +32,6 @@ Minecraft, Java, PostgreSQL, Fabric, third-party mods and game resources are sup
 
 MCHL does not redistribute Minecraft, its vanilla code or its vanilla resource assets. Modpack distribution is limited to custom content. Third-party mods, resource packs and shader packs must be distributed under their respective licences with required attribution and notices. This policy does not establish that every candidate modpack has completed an asset-by-asset licence review.
 
-`assets/honer-announcement.png` is existing AI-generated project announcement artwork. `assets/launcher-preview.png` is a Windows desktop smoke-test capture from the development project showing a local guest page. Both images reuse existing project assets; they do not represent official game artwork, a final release interface or successful online authentication.
+The README images `assets/aimatrix-download.png` and `assets/aimatrix-download-en.png` are actual Chinese and English captures of the packaged `0.1.0-alpha.15` client, showing the AiMatrix game preparation entry. `assets/installer-zh.png` shows the completion page of that version's Windows installer. These captures do not establish that the game was downloaded, launched or authenticated online.
+
+The retained `assets/honer-announcement.png` is existing AI-generated project announcement artwork. `assets/launcher-preview.png` is an earlier Windows desktop smoke-test capture showing a local guest page. Both historical images reuse existing project assets; they do not represent official game artwork or a final release interface.
