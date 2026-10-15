@@ -1,35 +1,39 @@
-# MC Honer
+> NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+
+# MC Honer Launcher (MCHL)
 
 English · [中文](README.md)
 
-MC Honer is a Minecraft: Java Edition launcher under development for Windows. It manages accounts, game instances and modpack updates in one client, reducing the repeated setup, downloads and version management involved in switching between modpacks.
+MC Honer Launcher is a Minecraft: Java Edition launcher under development for Windows. It manages game accounts, separate game instances and modpack updates. Chinese and English versions are planned; the current interface is primarily in Chinese, and the English version is in preparation.
 
-The current version is `0.1.0-alpha.1`. This repository contains project information and images. Source code and application packages are not yet published.
+The GitHub repository owner, [SeasideH1](https://github.com/SeasideH1), is the individual developer responsible for this product. Contact: [qq1602770686@outlook.com](mailto:qq1602770686@outlook.com). This repository contains project information and interface images only. Source code and application packages are not published here.
 
-![MC Honer announcement background](assets/honer-announcement.png)
+## Sign-in, distribution and server access
 
-*Announcement background used by the launcher.*
+Account sign-in verifies a player's legitimate Minecraft identity and entitlement to the game. Players authorize access through Microsoft's official sign-in page. The client retrieves the Minecraft player profile, and the main service verifies the identity before creating a platform account without a separate password. The authentication flow is implemented, but the application has not been approved for Minecraft Services access. The complete live sign-in and server admission flow remains unverified.
 
-## Features
+MCHL does not redistribute Minecraft. Modpack distribution contains only custom content, including mods, resource packs, shader packs and configuration files. It excludes vanilla Minecraft code, binaries and resource assets. Third-party content requires permission for redistribution. The client obtains the game and vanilla resources separately from official or authorized sources. Using the launcher or downloading a modpack does not grant a Minecraft licence.
 
-Each game instance keeps its own version, account selection and launch settings. The client supports creating and importing instances, managing Java runtimes, downloading game files and launching the game. Modpack updates verify files against signed manifests, handle conflicts with local configuration changes and support recovery after an interrupted update. World saves still need separate backups.
+The project contains no commercial paid content. Its operating rules allow players with a legitimate game entitlement to download the corresponding modpacks and join servers. Server operators may select a subset of players for testing. Test access must not involve commercial activity: it cannot be sold or tied to payments, donations, memberships, or purchases of other goods or services. Test players must also hold a legitimate game entitlement.
 
-Microsoft sign-in uses device authorization through the system browser. The client implements the Microsoft, Xbox Live and Minecraft Services authentication flow to obtain a game identity and retrieve entitlement information and player profiles. The project's application approval is pending; live authorization still needs to be tested after approval.
+The current development build retains offline identities for development and testing. After development is complete, this capability will remain restricted to those purposes and will not be exposed to ordinary players or serve as a way to bypass entitlement verification. The development interface still exposes an offline identity entry point; isolating and verifying that entry point is required before a player-facing release.
 
-The project also includes a main service and a self-hostable modpack distribution service. The main service manages platform accounts, friends, invitations and access grants; the distribution service publishes releases and limits download traffic. Platform accounts are created from verified Minecraft identities without a separate password. Game servers report playtime, while local guest timers are stored separately.
+## Features and interface
 
-## Interface
+Each game instance keeps its own version, account selection and launch settings. The client supports creating and importing instances, managing Java runtimes, downloading game files and launching the game. Modpack updates verify files against signed manifests, handle local configuration conflicts and support recovery after an interrupted update. World saves still need separate backups.
 
-![MC Honer development build showing the user home page](assets/launcher-preview.png)
+The main service manages platform accounts, friends, invitations and access grants. A separate distribution service publishes modpacks and serves downloads. Game servers report playtime; the development build keeps local guest timers separately.
 
-*Windows development build showing a local guest profile.*
+![MCHL announcement background](assets/honer-announcement.png)
+
+*AI-generated announcement artwork used by the project.*
+
+![MCHL development build showing the user home page](assets/launcher-preview.png)
+
+*An early Windows development screenshot retaining the previous name. It shows a local guest profile used for development and testing, not a player-facing release interface.*
 
 ## Development status
 
 The client uses Electron and Node.js, with SQLite for local data. The main service uses PostgreSQL. The launcher runs separately from the game server; the statistics and admission adapter is installed only on the server.
 
-Development tests on October 13, 2026 covered the Windows client, portable package, signed updates through a local distribution service and PostgreSQL service operation. In an isolated environment running Minecraft `26.4 Snapshot 3`, Fabric `0.19.5` and Java `25.0.1`, an offline account reached the game menu and exited normally. OPL was tested with two nodes on one machine; cross-network connections remain untested.
-
-Authenticated sign-in and server admission, complete player-session statistics, public deployment and capacity testing are still pending. The candidate application has no Windows code signature. Launcher self-updates, executable plugin extensions and Linux / macOS builds are not yet available. See the [development notes](docs/development.en.md) for dependencies, configuration and test limitations.
-
-MC Honer is an independent third-party project, not affiliated with or endorsed by Microsoft or Mojang. See [NOTICE.md](NOTICE.md) for software and image provenance, third-party licences and distribution information.
+The project remains under development. See the [development notes](docs/development.en.md) for the versions, environments and scope of recorded tests. These records do not establish release readiness. See [NOTICE.md](NOTICE.md) for software provenance, artwork and third-party licences.
