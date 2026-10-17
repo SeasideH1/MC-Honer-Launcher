@@ -13,11 +13,11 @@ The client supports Simplified Chinese and English. Switch under Settings → Ap
 
 The GitHub repository owner, [SeasideH1](https://github.com/SeasideH1), is the individual developer responsible for this product.
 Contact: [qq1602770686@outlook.com](mailto:qq1602770686@outlook.com).
-The launcher is still in early development and testing. This repository contains project information and interface images only; source code and application packages are not published here.
+The launcher is still in early development and testing. [GitHub Releases](https://github.com/SeasideH1/MC-Honer-Launcher/releases/tag/v0.1.0-alpha.28) provides a Windows x64 prerelease installer. The development source remains private. macOS and Linux remain development targets; this release includes no packages for them.
 
-## Sign-in, distribution and server access (provisional during early development and subject to minor changes)
+## Sign-in, distribution and server access
 
-![MC Honer Launcher account sign-in page](assets/account-signin-en.png?v=450368d)
+![alpha.28 Microsoft account verification entry](assets/account-verification-alpha28-en.png)
 
 Account sign-in verifies a player's legitimate Minecraft identity and entitlement to the game. Players authorize access through Microsoft's official sign-in page. The client retrieves the Minecraft player profile, and the main service verifies the identity before creating a platform account without a separate password.
 The authentication flow is implemented, but the application has not been approved for Minecraft Services access. The complete live sign-in and server admission flow remains unverified.
@@ -26,7 +26,21 @@ MCHL does not redistribute Minecraft. Modpack distribution contains only custom 
 
 The project contains no commercial paid content. Its operating rules allow players with a legitimate game entitlement to download the corresponding modpacks and join servers. Third-party remote servers connected to the platform may select a subset of players according to their testing plans. Test access must not involve commercial activity: it cannot be sold or tied to payments, donations, memberships, or purchases of other goods or services. Test players must also hold a legitimate game entitlement.
 
-The client allows local offline identities, but they can only be used when a trusted remote's signed policy explicitly permits offline play. These identities can launch only the single-player or OPL modes permitted by that remote; they cannot sign in to the platform or obtain authenticated server admission.
+Starting with alpha.28, game launch requires a Microsoft account verified against Minecraft Services. A previously verified account may launch without network access while its local verification remains valid: no later than the Minecraft token's expiry and at most 24 hours after verification. Offline use does not renew the record. Missing entitlement, expired verification or an explicit official rejection blocks launch. Legacy offline and third-party account records are retained but cannot launch the game.
+
+OPL provides connectivity only; it cannot establish or replace game entitlement. A remote operator's test-access grant cannot bypass verification. Servers remain responsible for independently authenticating players. See the [authentication review](docs/AUTHENTICATION-ALPHA28.en.md) for the checks and limitations.
+
+## Installation and use
+
+![alpha.28 Windows installer preview; no installation performed](assets/installer-alpha28-en.png)
+
+1. Download `MC-Honer-0.1.0-alpha.28-x64-Setup.exe` from the [alpha.28 release](https://github.com/SeasideH1/MC-Honer-Launcher/releases/tag/v0.1.0-alpha.28) on Windows x64. This is an unsigned development prerelease.
+2. Run the installer, choose a dedicated installation folder and interface language, then open the client. Settings provides language, instance and account controls.
+3. The current package does not have an approved Microsoft AppID configured, so a fresh installation cannot complete sign-in or launch the game. Once the maintainer configures this application's approved AppID, players can authorize through Microsoft's pages, complete game verification, select the account for an instance and launch.
+
+Users with a valid local verification and an already prepared game and Java runtime can select Default game settings under Settings → Accounts and launch, enable Use a verified account offline, and save. Disable it when back online. Private modpack access and server admission may still require connectivity.
+
+The interface images below preserve earlier development screens. The account rules for alpha.28 are described on this page and in the authentication review.
 
 ## Features and interface
 
@@ -42,4 +56,4 @@ The main service manages platform accounts, friends, invitations and access gran
 The client uses Electron and Node.js, with SQLite for local data. The main service uses PostgreSQL.
 The launcher runs separately from the game server.
 
-The current development candidate is `0.1.0-alpha.15`. See the [development notes](docs/development.en.md) for the versions, environments and scope of recorded tests. These records do not establish release readiness. See [NOTICE.md](NOTICE.md) for software provenance, artwork and third-party licences.
+The current public prerelease is `0.1.0-alpha.28`. See the [development notes](docs/development.en.md) for the versions, environments and scope of recorded tests. These records do not establish release readiness. See [NOTICE.md](NOTICE.md) for software provenance, artwork and third-party licences.

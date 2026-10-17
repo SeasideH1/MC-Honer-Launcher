@@ -2,7 +2,11 @@
 
 ## 中文
 
-本仓库仅包含 MC Honer Launcher（MCHL）的公开介绍与图片，未发布软件源码或二进制程序，也未为本项目选择开源许可证。内部工程的 `LicenseRef-Private-Project` 是打包标识，不是标准开源许可证。第三方软件、商标与内容保留各自的许可和使用条件。
+`assets/account-verification-alpha28-en.png` 来自 alpha.28 实际打包客户端的账号入口烟测；`assets/installer-alpha28-en.png` 来自该版本实际 WPF 安装器的预览渲染，使用示例安装目录，未执行安装。
+
+alpha.28 安装包保留 Electron / Chromium 许可证、第三方声明及 OpenP2P 引擎的 MIT 许可证和修改来源记录。下文提及未发布依赖的段落描述此前仅公开介绍的阶段。
+
+Git 仓库包含 MC Honer Launcher（MCHL）的公开文档与图片，GitHub Release 另行提供 Windows 预发行二进制程序。开发源码不公开，也未为本项目选择开源许可证。内部工程的 `LicenseRef-Private-Project` 是打包标识，不是标准开源许可证。第三方软件、商标与内容保留各自的许可和使用条件。
 
 MC Honer Launcher 的部分启动器业务模块移植自项目维护者的 AiMatrixLauncher 工程，界面基于维护者提供的 MC Honer 原型。PCL / OPL 作为功能设计参考；未复制其 GUI 源码。
 
@@ -22,7 +26,11 @@ README 中的 `assets/launcher-welcome-en.png`、`assets/launcher-home-en.png`�
 
 ## English
 
-This repository contains only public information about MC Honer Launcher (MCHL) and images. It publishes no application source or binaries, and no open-source licence has been selected for the project. The internal `LicenseRef-Private-Project` value is a packaging identifier, not a standard open-source licence. Third-party software, trademarks and content retain their respective terms.
+`assets/account-verification-alpha28-en.png` captures the actual packaged alpha.28 account-entry smoke test. `assets/installer-alpha28-en.png` is rendered by that version's WPF installer preview with an example destination; it does not document a completed installation.
+
+The alpha.28 package retains Electron / Chromium licences, third-party notices and the OpenP2P engine MIT licence and modification provenance. Statements below about unpublished dependencies describe the earlier documentation-only stage.
+
+The Git repository contains public MC Honer Launcher (MCHL) documentation and images. GitHub Releases separately provides Windows prerelease binaries. The development source remains private, and no open-source licence has been selected for the project. The internal `LicenseRef-Private-Project` value is a packaging identifier, not a standard open-source licence. Third-party software, trademarks and content retain their respective terms.
 
 Some launcher modules were adapted from the maintainer's AiMatrixLauncher project. The interface is based on the supplied MC Honer prototype. PCL / OPL informed functional design; their GUI source was not copied.
 

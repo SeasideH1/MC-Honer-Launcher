@@ -1,5 +1,9 @@
 # MC Honer Launcher development notes
 
+## Current release
+
+`0.1.0-alpha.28` is available as an unsigned Windows x64 [prerelease installer](https://github.com/SeasideH1/MC-Honer-Launcher/releases/tag/v0.1.0-alpha.28). See the [authentication review](AUTHENTICATION-ALPHA28.en.md) for the current Microsoft-only launch requirement, bounded offline verification and test scope. Earlier offline-identity results below describe superseded versions.
+
 [Back to the project overview](../README.en.md)
 
 | Component | Current implementation and responsibility |
@@ -13,7 +17,7 @@ The development project requires Node.js 24 or later and uses Electron 44.7.0. T
 
 Maintainers supply service addresses, the Microsoft application ID and trust information through a distribution configuration. Players do not need to register an application. Windows user data defaults to `%APPDATA%\MC-Honer`, separate from the installation directory. Microsoft refresh tokens are kept in the local credential vault protected by Windows DPAPI. Platform sign-in sends a short-lived Minecraft token to the configured trusted main service for verification against official services; modpack distribution servers receive signed access grants only.
 
-This public repository contains no application entry point, dependency manifest or service configuration. Cloning it does not provide a runnable or deployable MC Honer Launcher application, so installation commands are not provided at this stage. Public packages and their deployment instructions will be supplied separately when ready for release.
+This Git repository contains public documentation and images, not the private development source or service configuration. Use the Windows installer linked above to inspect the client. Cloning this repository does not provide service deployment sources.
 
 ## Development records
 
@@ -21,7 +25,7 @@ Internal development records dated October 13, 2026 for `0.1.0-alpha.1` include 
 
 Those records also include an OPL connection test between two nodes on one machine, without cross-network coverage. That candidate had no Windows code signature. These historical results do not establish that later versions have passed live Microsoft authorization, authenticated server admission, complete player-session statistics or public-network capacity acceptance.
 
-## Current client
+## Historical alpha.15 client
 
 In `0.1.0-alpha.15`, the window, tray, shortcuts and installer use MC Honer Launcher (MCHL). Language is selected in Settings. New profiles follow the system language; existing preferences are preserved. The application ID, executable filename and `%APPDATA%\MC-Honer` data directory retain compatibility. Account names, paths and remote publisher content are not automatically translated.
 
